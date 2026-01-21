@@ -10,24 +10,11 @@ export const projects: Project[] = [
     route: '/commit-story',
   },
   {
-    icon: '🚀',
-    title: 'Project Alpha',
+    icon: '💪',
+    title: 'Sessions',
     description:
-      "A cutting-edge experiment pushing the boundaries of what's possible. Built for fun, designed to impress.",
-    tags: ['React', 'TypeScript', 'AI'],
-  },
-  {
-    icon: '🎮',
-    title: 'Game Lab',
-    description:
-      'Interactive experiences and game prototypes. Where creativity meets code in the most playful way.',
-    tags: ['Canvas', 'WebGL', 'Games'],
-  },
-  {
-    icon: '🔧',
-    title: 'Dev Tools',
-    description:
-      'Utilities and tools that make development more enjoyable. Solving problems I encounter daily.',
-    tags: ['CLI', 'Automation', 'DX'],
+      'A gym-focused social media app for logging workouts, connecting with friends, and sharing your fitness journey. Now open sourced.',
+    tags: ['React Native', 'Node.js', 'PostgreSQL', 'Archived'],
+    route: '/sessions',
   },
 ]

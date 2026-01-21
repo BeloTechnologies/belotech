@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
-import { Hero, Projects, Footer } from './components'
+import { Hero, Projects, Footer, ScrollToTop } from './components'
 import { CommitStory } from './projects/commit-story'
+import { Sessions } from './projects/sessions'
 import './App.css'
 
 function HomePage() {
@@ -15,10 +16,14 @@ function HomePage() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/commit-story" element={<CommitStory />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/commit-story" element={<CommitStory />} />
+        <Route path="/sessions" element={<Sessions />} />
+      </Routes>
+    </>
   )
 }
 
