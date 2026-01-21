@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: 'Sessions',
     description:
       'A gym-focused social media app for logging workouts, connecting with friends, and sharing your fitness journey. Now open sourced.',
-    tags: ['React Native', 'Node.js', 'PostgreSQL', 'Archived'],
+    tags: ['Flutter', 'Go', 'Archived'],
     route: '/sessions',
   },
 ]
