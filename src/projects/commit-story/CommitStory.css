@@ -1,0 +1,328 @@
+.commit-story {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+.bg-animation {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: floatShape 20s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-primary);
+  top: -10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-tertiary);
+  top: 60%;
+  right: -5%;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 250px;
+  height: 250px;
+  background: var(--accent-secondary);
+  bottom: -5%;
+  left: 30%;
+  animation-delay: -10s;
+}
+
+.shape-4 {
+  width: 200px;
+  height: 200px;
+  background: #22d3ee;
+  top: 30%;
+  left: 60%;
+  animation-delay: -15s;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(20px, 10px) scale(1.05);
+  }
+}
+
+/* Code rain effect */
+.code-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.code-drop {
+  position: absolute;
+  top: -20px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-primary);
+  opacity: 0.15;
+  animation: codeFall linear infinite;
+  text-shadow: 0 0 10px var(--accent-primary);
+}
+
+@keyframes codeFall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ===== HEADER ===== */
+.commit-story-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem 1.5rem 0;
+}
+
+.back-link {
+  position: absolute;
+  left: 1.5rem;
+  top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--text-primary);
+}
+
+.commit-story-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.commit-story-title .gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.commit-story-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+/* ===== MAIN CONTENT ===== */
+.commit-story-main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem 1.5rem;
+}
+
+/* ===== INPUT FORM ===== */
+.repo-form {
+  width: 100%;
+  max-width: 700px;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-glow {
+  position: absolute;
+  inset: -2px;
+  background: var(--accent-gradient);
+  border-radius: 18px;
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.input-wrapper:focus-within .input-glow {
+  opacity: 0.5;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(12px);
+  }
+}
+
+.repo-input {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+  padding-right: 4rem;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.repo-input::placeholder {
+  color: var(--text-muted);
+}
+
+.repo-input:focus {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+}
+
+.submit-btn {
+  position: absolute;
+  right: 0.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateX(4px);
+  box-shadow: var(--glow);
+}
+
+.submit-btn:active {
+  transform: translateX(2px);
+}
+
+.input-hint {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+/* ===== FEATURE PREVIEW ===== */
+.feature-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 4rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--card-shadow);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .back-link {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+
+  .commit-story-header {
+    padding-top: 1.5rem;
+  }
+
+  .repo-input {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    padding-right: 3.5rem;
+  }
+
+  .submit-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-preview {
+    grid-template-columns: 1fr;
+  }
+}
