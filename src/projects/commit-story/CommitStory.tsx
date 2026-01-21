@@ -1,18 +1,7 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './CommitStory.css'
 
 export function CommitStory() {
-  const [repoUrl, setRepoUrl] = useState('')
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (repoUrl.trim()) {
-      // TODO: Fetch commits and analyze
-      console.log('Analyzing repo:', repoUrl)
-    }
-  }
-
   return (
     <div className="commit-story">
       {/* Animated background elements */}
@@ -42,6 +31,11 @@ export function CommitStory() {
           </svg>
           Back
         </Link>
+        <div className="construction-badge">
+          <span className="construction-icon">🚧</span>
+          Under Construction
+          <span className="construction-icon">🚧</span>
+        </div>
         <h1 className="commit-story-title">
           <span className="gradient-text">commit</span>-story
         </h1>
@@ -52,27 +46,25 @@ export function CommitStory() {
 
       {/* Main input section */}
       <main className="commit-story-main">
-        <form onSubmit={handleSubmit} className="repo-form">
-          <div className="input-wrapper">
+        <div className="repo-form">
+          <div className="input-wrapper input-disabled">
             <div className="input-glow" />
             <input
               type="text"
-              value={repoUrl}
-              onChange={(e) => setRepoUrl(e.target.value)}
-              placeholder="Paste a GitHub repo URL and watch the magic happen..."
+              placeholder="Coming soon... stay tuned! ✨"
               className="repo-input"
-              autoFocus
+              disabled
             />
-            <button type="submit" className="submit-btn" aria-label="Analyze repository">
+            <button type="button" className="submit-btn" disabled aria-label="Coming soon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </button>
           </div>
           <p className="input-hint">
-            Try something like: github.com/facebook/react
+            🛠️ Hammering away at something awesome...
           </p>
-        </form>
+        </div>
 
         {/* Feature preview cards */}
         <div className="feature-preview">
