@@ -2,6 +2,10 @@ import { Button } from '../ui/Button'
 import './Hero.css'
 
 export function Hero() {
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -15,7 +19,7 @@ export function Hero() {
           out."
         </p>
         <div className="hero-cta">
-          <Button href="#projects">View Projects</Button>
+          <Button onClick={scrollToProjects}>View Projects</Button>
           <Button
             variant="secondary"
             href="https://github.com/BeloTechnologies"
