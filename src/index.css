@@ -31,6 +31,10 @@
   /* Effects */
   --glow: 0 0 40px rgba(139, 92, 246, 0.3);
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+
+  /* Mobile spacing */
+  --mobile-padding: 1rem;
+  --mobile-section-padding: clamp(2rem, 8vw, 4rem);
 }
 
 html {
@@ -82,4 +86,26 @@ p {
 ::selection {
   background: var(--accent-secondary);
   color: white;
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: var(--mobile-section-padding);
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 375px) {
+  body {
+    font-size: 0.9375rem; /* 15px base for small screens */
+  }
+  
+  h1 {
+    font-size: clamp(1.75rem, 10vw, 2.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
 }

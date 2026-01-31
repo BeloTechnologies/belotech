@@ -6,6 +6,18 @@
   padding: 0 1.5rem;
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0 0.875rem;
+  }
+}
+
 /* ===== SHARED ANIMATIONS ===== */
 @keyframes fadeInUp {
   from {

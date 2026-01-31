@@ -423,8 +423,27 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .droplet-content {
+    padding: 0 1rem 3rem;
+  }
+  
+  .droplet-hero {
+    margin-bottom: 3rem;
+  }
+  
+  .droplet-about,
+  .droplet-features,
+  .droplet-tech {
+    margin-bottom: 3rem;
+  }
+  
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+  
+  .feature-card {
+    padding: 1.25rem;
   }
 
   .droplet-page .repo-card {
@@ -433,5 +452,138 @@
 
   .droplet-page .repo-arrow {
     align-self: flex-end;
+  }
+  
+  .droplet-page .about-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 375px) {
+  .droplet-page .shape-1,
+  .droplet-page .shape-2,
+  .droplet-page .shape-3 {
+    opacity: 0.3; /* Reduce visual clutter */
+  }
+  
+  .droplet-page .shape-1 {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .droplet-page .shape-2 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .droplet-page .shape-3 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .droplet-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .droplet-content {
+    padding: 0 0.875rem 2rem;
+  }
+  
+  .droplet-hero {
+    margin-bottom: 2rem;
+  }
+  
+  .droplet-page .status-badge {
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.875rem;
+  }
+  
+  .droplet-title {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+  
+  .droplet-tagline {
+    font-size: 1.0625rem;
+  }
+  
+  .droplet-about,
+  .droplet-features,
+  .droplet-tech {
+    margin-bottom: 2rem;
+  }
+  
+  .droplet-about h2,
+  .droplet-features h2,
+  .droplet-tech h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .droplet-page .about-card {
+    padding: 1rem;
+  }
+  
+  .droplet-page .about-card p {
+    font-size: 0.9375rem;
+  }
+  
+  .features-grid {
+    gap: 0.75rem;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.75rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.875rem;
+  }
+  
+  .tech-item {
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .tech-name {
+    font-size: 0.9375rem;
+  }
+  
+  .tech-desc {
+    font-size: 0.75rem;
+  }
+  
+  .droplet-page .repo-card {
+    padding: 1rem;
+  }
+  
+  .droplet-page .repo-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .droplet-page .repo-info h3 {
+    font-size: 1rem;
+  }
+  
+  .droplet-page .repo-info p {
+    font-size: 0.875rem;
+  }
+  
+  .droplet-page .tech-tag {
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .privacy-link {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
   }
 }
