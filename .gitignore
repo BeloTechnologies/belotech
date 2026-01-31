@@ -27,3 +27,6 @@ dist-ssr
 src/assets/screenshot1.png
 src/assets/screenshot2.png
 src/assets/screenshot3.png
+.vercel
+
+public/og-image.svg
