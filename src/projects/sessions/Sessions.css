@@ -370,3 +370,135 @@
     align-self: flex-end;
   }
 }
+
+/* Small mobile devices */
+@media (max-width: 375px) {
+  .shape-1,
+  .shape-2,
+  .shape-3 {
+    opacity: 0.3; /* Reduce visual clutter */
+  }
+  
+  .shape-1 {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .shape-2 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .shape-3 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .sessions-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .sessions-content {
+    padding: 0 0.875rem 2rem;
+  }
+  
+  .sessions-hero {
+    margin-bottom: 2rem;
+  }
+  
+  .status-badge {
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.875rem;
+  }
+  
+  .sessions-title {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+  }
+  
+  .sessions-tagline {
+    font-size: 1.0625rem;
+  }
+  
+  .sessions-about,
+  .sessions-features,
+  .sessions-tech,
+  .sessions-screenshots,
+  .sessions-repos {
+    margin-bottom: 2rem;
+  }
+  
+  .sessions-about h2,
+  .sessions-features h2,
+  .sessions-tech h2,
+  .sessions-screenshots h2,
+  .sessions-repos h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-card {
+    padding: 1rem;
+  }
+  
+  .about-card p {
+    font-size: 0.9375rem;
+  }
+  
+  .features-grid {
+    gap: 0.75rem;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.75rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.875rem;
+  }
+  
+  .tech-item {
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .tech-name {
+    font-size: 0.9375rem;
+  }
+  
+  .tech-desc {
+    font-size: 0.75rem;
+  }
+  
+  .screenshot-wrapper {
+    max-width: 180px;
+  }
+  
+  .repo-card {
+    padding: 1rem;
+  }
+  
+  .repo-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .repo-info h3 {
+    font-size: 1rem;
+  }
+  
+  .repo-info p {
+    font-size: 0.875rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
