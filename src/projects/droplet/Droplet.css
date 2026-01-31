@@ -1,0 +1,401 @@
+.droplet-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+.droplet-page .bg-animation {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.droplet-page .floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: floatShape 20s ease-in-out infinite;
+}
+
+.droplet-page .shape-1 {
+  width: 350px;
+  height: 350px;
+  background: #0ea5e9;
+  top: -10%;
+  right: -5%;
+  animation-delay: 0s;
+}
+
+.droplet-page .shape-2 {
+  width: 300px;
+  height: 300px;
+  background: #06b6d4;
+  bottom: 20%;
+  left: -10%;
+  animation-delay: -7s;
+}
+
+.droplet-page .shape-3 {
+  width: 250px;
+  height: 250px;
+  background: #5dade2;
+  top: 40%;
+  right: 20%;
+  animation-delay: -14s;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -20px) scale(1.05);
+  }
+  50% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
+  75% {
+    transform: translate(15px, 10px) scale(1.02);
+  }
+}
+
+/* Water emoji rain effect */
+.water-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.water-drop {
+  position: absolute;
+  top: -20px;
+  font-size: 1rem;
+  opacity: 0.15;
+  animation: waterFall linear infinite;
+  filter: drop-shadow(0 0 8px #0ea5e9);
+}
+
+@keyframes waterFall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ===== HEADER ===== */
+.droplet-header {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.5rem;
+}
+
+.droplet-page .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.droplet-page .back-link:hover {
+  color: var(--text-primary);
+}
+
+/* ===== CONTENT ===== */
+.droplet-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ===== HERO ===== */
+.droplet-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.droplet-page .status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.droplet-page .status-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.droplet-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.droplet-title .gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #5dade2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.droplet-tagline {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== ABOUT ===== */
+.droplet-about {
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.droplet-about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.droplet-page .about-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.droplet-page .about-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.droplet-page .about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.droplet-page .highlight-text {
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--text-primary) !important;
+  border-left: 3px solid #0ea5e9;
+  padding-left: 1rem;
+  margin: 1.5rem 0 !important;
+}
+
+/* ===== FEATURES ===== */
+.droplet-features {
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.droplet-features h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(14, 165, 233, 0.3);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* ===== TECH STACK ===== */
+.droplet-tech {
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.droplet-tech h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.tech-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.tech-name {
+  font-weight: 600;
+  color: #0ea5e9;
+}
+
+.tech-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* ===== REPO ===== */
+.droplet-repo {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.droplet-page .repo-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.droplet-page .repo-card:hover {
+  border-color: var(--border-color-hover);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
+}
+
+.droplet-page .repo-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  color: var(--text-secondary);
+}
+
+.droplet-page .repo-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.droplet-page .repo-info h3 {
+  font-size: 1.125rem;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  margin-bottom: 0.5rem;
+}
+
+.droplet-page .repo-info p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.droplet-page .repo-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.droplet-page .tech-tag {
+  padding: 0.25rem 0.625rem;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.droplet-page .repo-arrow {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.droplet-page .repo-card:hover .repo-arrow {
+  transform: translate(4px, -4px);
+  color: var(--text-secondary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .droplet-page .repo-card {
+    flex-direction: column;
+  }
+
+  .droplet-page .repo-arrow {
+    align-self: flex-end;
+  }
+}

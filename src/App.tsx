@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Hero, Projects, Footer, ScrollToTop } from './components'
 import { CommitStory } from './projects/commit-story'
+import { Droplet } from './projects/droplet'
 import { Sessions } from './projects/sessions'
 import './App.css'
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/commit-story" element={<CommitStory />} />
+        <Route path="/droplet" element={<Droplet />} />
         <Route path="/sessions" element={<Sessions />} />
       </Routes>
     </>

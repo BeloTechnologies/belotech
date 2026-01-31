@@ -2,6 +2,14 @@ import type { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    icon: '💧',
+    title: 'Droplet',
+    description:
+      'A friendly hydration companion that makes drinking water fun. Track intake with personalized goals based on your body weight.',
+    tags: ['iOS', 'SwiftUI', 'SwiftData'],
+    route: '/droplet',
+  },
+  {
     icon: '📖',
     title: 'commit-story',
     description:
