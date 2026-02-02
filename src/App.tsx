@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { Hero, Projects, Footer, ScrollToTop } from './components'
+import { Hero, Projects, Footer, ScrollToTop, NotFound } from './components'
 import { CommitStory } from './projects/commit-story'
 import { Droplet, DropletPrivacy } from './projects/droplet'
 import { Sessions } from './projects/sessions'
@@ -25,6 +25,7 @@ function App() {
         <Route path="/droplet" element={<Droplet />} />
         <Route path="/droplet/privacy" element={<DropletPrivacy />} />
         <Route path="/sessions" element={<Sessions />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
