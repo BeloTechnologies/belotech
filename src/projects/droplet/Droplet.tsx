@@ -156,6 +156,21 @@ export function Droplet() {
 
         {/* Footer */}
         <footer className="droplet-footer">
+          <Link to="/droplet/whats-new" className="privacy-link">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+            What's New
+          </Link>
           <Link to="/droplet/privacy" className="privacy-link">
             <svg
               width="16"
