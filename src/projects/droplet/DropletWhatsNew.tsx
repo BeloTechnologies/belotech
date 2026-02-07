@@ -3,7 +3,8 @@ import "./DropletPrivacy.css";
 import "./DropletWhatsNew.css";
 
 const versions = [
-  { id: "v1-1-0", title: "Version 1.1.0", isLatest: true },
+  { id: "v1-11-0", title: "Version 1.11.0", isLatest: true },
+  { id: "v1-1-0", title: "Version 1.1.0", isLatest: false },
   { id: "v1-0-0", title: "Version 1.0.0", isLatest: false },
 ];
 
@@ -37,7 +38,7 @@ export function DropletWhatsNew() {
           <div className="privacy-title-section">
             <span className="privacy-badge">Droplet</span>
             <h1 className="privacy-title">What's New</h1>
-            <p className="privacy-date">Last Updated: February 2, 2026</p>
+            <p className="privacy-date">Last Updated: February 7, 2026</p>
           </div>
 
           {/* Key highlight */}
@@ -73,11 +74,44 @@ export function DropletWhatsNew() {
 
           {/* Sections */}
           <div className="privacy-sections">
-            <section id="v1-1-0" className="privacy-section">
+            <section id="v1-11-0" className="privacy-section">
               <h2>
-                Version 1.1.0
+                Version 1.11.0
                 <span className="latest-chip">Latest</span>
               </h2>
+              <p>
+                <strong>Home Screen Widgets</strong>
+              </p>
+              <ul className="privacy-list">
+                <li>
+                  Track your hydration progress at a glance with beautiful widgets in three sizes
+                </li>
+                <li>
+                  Small widget shows your current progress percentage
+                </li>
+                <li>
+                  Medium widget displays your friendly Droplet buddy with current intake
+                </li>
+                <li>
+                  Large widget includes detailed stats with minimum and recommended goals
+                </li>
+                <li>
+                  Widgets update automatically when you log water
+                </li>
+              </ul>
+              <p>
+                <strong>Performance & Stability</strong>
+              </p>
+              <ul className="privacy-list">
+                <li>Faster app launch times and smoother animations</li>
+                <li>Improved data synchronization between app and widgets</li>
+                <li>Enhanced memory management for better battery life</li>
+                <li>Various bug fixes and stability improvements</li>
+              </ul>
+            </section>
+
+            <section id="v1-1-0" className="privacy-section">
+              <h2>Version 1.1.0</h2>
               <p>
                 <strong>Daily Reminders</strong>
               </p>
